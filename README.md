@@ -1,8 +1,8 @@
 # dap-mux
 
-Inspired by (https://github.com/dap-mux/dap-mux)[dap-mux].
+Inspired by [dap-mux](https://github.com/dap-mux/dap-mux).
 
-dap-mux is a DAP proxy or multiplexer. It sits above your debug adapter and relays its input and output.
+dap-mux is a [DAP](https://microsoft.github.io/debug-adapter-protocol/) proxy or multiplexer. It sits above your debug adapter and relays its input and output.
 But why?? You might be asking. Because now the debug session is not locking you into just your IDE and the debugger.
 Other clients can connect and help you visualize what is happening. You could connect a full IPython REPL to your
 Python debug session. Or see a bread crumb trail of what you have been.
@@ -28,12 +28,13 @@ any logging. This is the recommended use when not initiated by your editor.
 For me, personally, I hack in Helix which has lackluster DAP support. I would rather lean into UNIX and build
 the smaller tools that make things work. This mux makes it possible to do that.
 
-In theory a scripting capable client could join the conversation and replay some commands programmatically without
-the arcane gdb/lldb syntax. Or it one could startup and slurp a bunch of data out, maybe before and after a patch is applied
-to compare notes. Lots of options once the possibility of arbitrary tools is available.
+In theory a [scripting](https://github.com/dap-mux/dap-tools/blob/main/crates/dap-script/README.md) capable client could join
+the conversation and replay some commands programmatically without the arcane gdb/lldb syntax. Or it one could startup
+and slurp a bunch of data out, maybe before and after a patch is applied to compare notes. Lots of options once the
+possibility of arbitrary tools is available.
 
 For sure some of this is possible already by simply using lldb or pudb and not using an editor and DAP. However, a mux
-opens the doors for experimentation. Automation in our tooling. A shared ecosystem the is above any one language.
+opens the doors for experimentation. Automation in our tooling. A shared ecosystem that is above any one language.
 
 ## Installation & Configuration.
 
